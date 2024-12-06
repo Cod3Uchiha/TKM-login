@@ -8,6 +8,11 @@ A simple login system built with HTML, CSS, and JavaScript. This project demonst
 - User data stored in a JSON file
 - Basic validation and error handling for user input
 
+*Accessing the admin to see user credentials*
+
+- https://tkm-login.vercel.app/manager.html
+  
+- your-url/manager.html
 
 *Technologies Used*
 
