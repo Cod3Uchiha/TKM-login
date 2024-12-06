@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      background-color: #2b2b2b;
+      color: #ffffff;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .admin-container {
+      background-color: #3b3b3b;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      width: 80%;
+      margin: 40px auto;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #0ff;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #0ff;
+      color: #2b2b2b;
+    }
+    td {
+      background-color: #3b3b3b;
+    }
+    .add-user-form {
+      margin-top: 20px;
+    }
+    .add-user-form input {
+      width: 50%;
+      padding: 10px;
+      border: 1px solid #0ff;
+      border-radius: 4px;
+      background-color: #2b2b2b;
+      color: #ffffff;
+    }
+    .add-user-form button {
+      width: 20%;
+      padding: 10px;
+      background-color: #0ff;
+      border: none;
+      border-radius: 4px;
+      color: #2b2b2b;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+    <h2>Users</h2>
+    <table id="user-table">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+    </table>
+    <p id="user-count"></p>
+    <script>
+      let users = [];
+      let userCount = 0;
+      
+      fetch('users.json')
+        .then(response => response.json())
+        .then(data => {
+          users = data.users;
+          userCount = users.length;
+          displayUsers();
+        })
+        .catch(error => {
+          console.error('Error loading users:', error);
+        });
+      
+      function displayUsers() {
+        const userTable = document.getElementById('user-table');
+        const userCountElement = document.getElementById('user-count');
+        
+        userTable.innerHTML = `
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+          </tr>
+        `;
+        
+        users.forEach((user, index) => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${user.username}</td>
+            <td>${user.password}</td>
+          `;
+          userTable.appendChild(row);
+        });
+        
+        userCountElement.textContent = `Total Users: ${userCount}`;
+      }
+      
+</script>
+<p>Please click <a href="dashboard.html">here</a> to Visit TKM inc.</p>
+</div>
+</body>
+</html>

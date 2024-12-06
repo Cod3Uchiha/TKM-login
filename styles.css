@@ -1,0 +1,109 @@
+body {
+background-color: #2b2b2b;
+color: #ffffff;
+font-family: 'Courier New', Courier, monospace;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+.login-container {
+background-color: #3b3b3b;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+width: 300px;
+text-align: center;
+}
+
+h1 {
+font-size: 24px;
+margin-bottom: 20px;
+color: #0ff;
+}
+
+.input-group {
+margin-bottom: 15px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+}
+
+input {
+width: 80%;
+padding: 10px;
+border: 1px solid #0ff;
+border-radius: 4px;
+background-color: #2b2b2b;
+color: #ffffff;
+}
+
+input:focus {
+border-color: #0ff;
+outline: none;
+}
+
+button {
+width: 30%;
+padding: 10px;
+background-color: #0ff;
+border: none;
+border-radius: 4px;
+color: #2b2b2b;
+font-size: 16px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #00ffff;
+}
+
+.footer {
+margin-top: 20px;
+font-size: 12px;
+}
+
+/* Style the custom alert box */
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2b2b2b;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  width: 300px;
+  text-align: center;
+  z-index: 1;
+}
+
+.login-container {
+  transition: opacity 0.5s;
+}
+
+.alert h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0ff;
+}
+
+.alert button {
+  width: 30%;
+  padding: 10px;
+  background-color: #0ff;
+  border: none;
+  border-radius: 4px;
+  color: #2b2b2b;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.alert button:hover {
+  background-color: #00ffff;
+}
