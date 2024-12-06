@@ -1,4 +1,4 @@
-*Login Project*
+*Login page*
 
 A simple login system built with HTML, CSS, and JavaScript. This project demonstrates a basic user authentication system with a dashboard for administrators.
 
